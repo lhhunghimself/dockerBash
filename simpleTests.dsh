@@ -1,0 +1,7 @@
+docker::echo 'hello world' > /tmp/testFile
+docker::echo 'List file: ls -l /tmp/testFile -h'
+docker::ls -l /tmp/testFile -h
+docker::echo 'Find number of characters: cat /tmp/testFile | docker::wc -c'
+docker::cat /tmp/testFile | docker::wc -c
+docker::echo 'Using stdin: cat < /tmp/testFile | docker::wc -c'
+docker::cat < /tmp/testFile | docker::wc -c
