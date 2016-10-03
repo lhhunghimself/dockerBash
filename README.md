@@ -19,7 +19,27 @@ except that docker containers are called instead of the local binaries. The dock
 
 ```bash
 cd <PATH>/dockerBash
-sudo docker build -t "dbash" dbash #builds the dbash container
-#edit path in installAliases.sh
-installAliases.sh #installs the dbash script locally and aliases the run dbash command to docker::dbash
 ```
+Build the dbash container
+```bash
+sudo docker build -t "dbash" dbash
+```
+Edit path in installAliases.sh with vi or nano
+installAliases.sh installs the dbash script locally and aliases the run dbash command to docker::dbash
+```bash
+installAliases.sh 
+```
+To test build the test containers:
+Edit path in buildSimpleDockerfile.sh with vi or nano
+```bash
+docker::dbash -t <PATH>/dockerBash/buildSimpleContainers.dsh
+docker::dbash -t <PATH>/dockerBash/simpleTests.dsh
+```
+##Supported flags
+  -v[erbose]
+  
+  -c[ommand]  <command_string> (can be more than one instance)
+  
+  -l[ocal]    use local copy of dbash
+  
+  -t[ext]     script file (can be more than one instance)
