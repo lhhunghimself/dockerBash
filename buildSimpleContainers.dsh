@@ -1,0 +1,3 @@
+bash -c '/mnt/backup/DetoxS/dockerBash/buildSimpleDockerfile.sh ls'
+bash -c '/mnt/backup/DetoxS/dockerBash/buildSimpleDockerfile.sh cat'
+bash -c '/mnt/backup/DetoxS/dockerBash/buildSimpleDockerfile.sh wc'
